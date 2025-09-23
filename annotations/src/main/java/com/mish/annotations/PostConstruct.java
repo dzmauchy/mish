@@ -1,4 +1,4 @@
-package com.mish.annottaions;
+package com.mish.annotations;
 
 import java.lang.annotation.*;
 

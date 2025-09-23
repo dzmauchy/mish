@@ -1,18 +1,18 @@
-package com.mish.annottaions;
+package com.mish.annotations;
 
 import java.lang.annotation.*;
 
 /**
- * An annotation to register a prototype instance from a factory method or a class constructor
+ * An annotation to register a singleton instance from a factory method or a class constructor
  */
 @Retention(RetentionPolicy.SOURCE)
 @Target({ElementType.METHOD, ElementType.TYPE, ElementType.CONSTRUCTOR})
-public @interface Prototype {
+public @interface Singleton {
 
     /**
-     * Prototype name
+     * Unique singleton name
      *
-     * @return Prototype name
+     * @return Singleton name
      */
     String name();
 
@@ -31,9 +31,30 @@ public @interface Prototype {
     String[] initializers() default {""};
 
     /**
+     * MBean domain
+     *
+     * @return MBean domain
+     */
+    String[] domain() default {};
+
+    /**
+     * MBean attributes
+     *
+     * @return MBean attributes (key-value pairs)
+     */
+    String[] attributes() default {};
+
+    /**
      * Order
      *
      * @return Order
      */
     String order() default "";
+
+    /**
+     * Lazy initialization flag
+     *
+     * @return Lazy initialization flag value
+     */
+    boolean lazy() default true;
 }
