@@ -7,4 +7,7 @@
  */
 
 rootProject.name = "mish"
+
 include("annotations")
+
+project(":annotations").name = "mish-annotations"
