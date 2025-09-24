@@ -8,6 +8,7 @@
 
 rootProject.name = "mish"
 
-include("annotations")
+include("annotations", "processor")
 
 project(":annotations").name = "mish-annotations"
+project(":processor").name = "mish-processor"
