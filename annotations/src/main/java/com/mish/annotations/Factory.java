@@ -3,16 +3,16 @@ package com.mish.annotations;
 import java.lang.annotation.*;
 
 /**
- * Imported prototypes
+ * Factory
  */
 @Retention(RetentionPolicy.SOURCE)
 @Target({ElementType.TYPE})
-public @interface ImportedPrototypes {
+public @interface Factory {
 
     /**
-     * Imported prototypes
+     * Factory name
      *
-     * @return Imported prototypes
+     * @return Factory name
      */
-    ImportedPrototype[] value();
+    String name();
 }

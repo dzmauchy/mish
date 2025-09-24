@@ -7,17 +7,19 @@ import java.lang.annotation.*;
  */
 @Retention(RetentionPolicy.SOURCE)
 @Repeatable(ImportedSingletons.class)
-@Target({ElementType.TYPE, ElementType.PACKAGE})
+@Target({ElementType.TYPE})
 public @interface ImportedSingleton {
 
     /**
      * A reference to a type
+     *
      * @return Reference to a type
      */
     Class<?> ref();
 
     /**
      * Singleton definition
+     *
      * @return Singleton definition
      */
     Singleton def();

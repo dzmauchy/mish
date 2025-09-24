@@ -7,7 +7,7 @@ import java.lang.annotation.*;
  */
 @Retention(RetentionPolicy.SOURCE)
 @Repeatable(ImportedPrototypes.class)
-@Target({ElementType.TYPE, ElementType.PACKAGE})
+@Target({ElementType.TYPE})
 public @interface ImportedPrototype {
 
     /**
